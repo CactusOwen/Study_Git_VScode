@@ -31,7 +31,7 @@ Git 용어 정리하기
 - Status 로컬 저장소(git)의 Working Directory 상태 확인
 - Meta Data(메타 정보) == commit, tag, branch, history
 
-Git 주요 command
+Git 주요 command [https://git-scm.com/book/ko/v2/%EB%B6%80%EB%A1%9D-C%3A-Git-%EB%AA%85%EB%A0%B9%EC%96%B4-%EC%84%A4%EC%B9%98%EC%99%80-%EC%84%A4%EC%A0%95]
 - $git add << 파일을 Staging
     - 특정 파일만 Staging: $git add <filename>
     - 작업한 모든 파일을 Staging: $git add (option)
@@ -210,5 +210,4 @@ https://www.techopedia.com/definition/4024/message-digest
 (Git Doc의 Goals부터 보면됨 https://git-scm.com/docs/hash-function-transition/)
 ---------------------------------------------------------*/
 
-
-test chage
+Good morning
