@@ -25,7 +25,7 @@ Git 용어 정리하기
 - diff 저장공간 간의 변경사항 확인하기
 - Alias 단축 명령어 설정하기 [https://git-scm.com/book/ko/v2/Git%EC%9D%98-%EA%B8%B0%EC%B4%88-Git-Alias#_git_aliases]
 - patch
-- Checkout
+- Checkout 작업 branch 변경 및 소스 파일 다운로드
 - Remote 원격 저장소에 추가/삭제/조회 작업
 - Clone 원격 저장소를 로컬에 다운로드 (fetch + checkout) [https://git-scm.com/book/ko/v2/Git%EC%9D%98-%EA%B8%B0%EC%B4%88-Git-%EC%A0%80%EC%9E%A5%EC%86%8C-%EB%A7%8C%EB%93%A4%EA%B8%B0#_git_cloning]
 - Status 로컬 저장소(git)의 Working Directory 상태 확인
