@@ -114,7 +114,7 @@ https://git-scm.com/book/ko/v2/Git-%EB%8F%84%EA%B5%AC-Reset-%EB%AA%85%ED%99%95%E
     reset 명령은 HEAD가 가리키는 브랜치를 움직이지만(브랜치 Refs를 업데이트하지만), 
     checkout 명령은 HEAD 자체를 다른 브랜치로 옮긴다.
 
-각 commit의 checksum은 id이다.
+각 commit의 checksum(SHA-1)은 id이다.
 
 Q: 리모트와 로컬 ... 서버와 데이터들의 연동 ... 커밋만 저장할 뿐이라면 수정된 데이터들은 어떤 형태 방식으로 저장이 되어있는지 ...
 
@@ -184,7 +184,7 @@ https://git-scm.com/docs/hash-function-transition/
     - SHA-1는 최대 2^64 bit의 데이터를 160비트의 데이터로 계산합니다.
     - SHA-1은 SHA-0에 비트 회전 연산을 하나 추가한 것으로 암호학적 보안을 감소시키는 문제를 보완한 것입니다.
     - SHA-1은 IPSec, SMIME, TLS, SSL, PGP, SSH, 등 인터넷 보안 프로토콜과 공개키 인증서에도 사용되는 알고리즘입니다.
-    - 하지만 SHA-1가 미국 국가 표준 Hash Algorithm으로 채택된지 10년만에 '160비트의 message digest를 생성하는데 무차별 대입 공격으로 동일한 해시를 만들 수 있는 취약'
+    - 하지만 SHA-1가 미국 국가 표준 Hash Algorithm으로 채택된지 10년만에 160비트의 message digest를 생성하는 무차별 대입 공격으로 동일한 해시를 만들 수 있는 취약
     하다는 보안 문제점이 제기되어 SHA-2가 새로운 권장 Hash Algorithm이 되었습니다.
 
 https://git-scm.com/docs/hash-function-transition/
