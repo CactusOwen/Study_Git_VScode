@@ -24,13 +24,16 @@ Git 용어 정리하기
 - push / pull
 - diff 저장공간 간의 변경사항 확인하기
 - Alias 단축 명령어 설정하기 [https://git-scm.com/book/ko/v2/Git%EC%9D%98-%EA%B8%B0%EC%B4%88-Git-Alias#_git_aliases]
-- patch
+- patch [https://git-scm.com/book/ko/v2/%EB%B6%80%EB%A1%9D-C%3A-Git-%EB%AA%85%EB%A0%B9%EC%96%B4-Patch-%ED%95%98%EA%B8%B0]
 - Checkout 작업 branch 변경 및 소스 파일 다운로드
 - Remote 원격 저장소에 추가/삭제/조회 작업
 - Clone 원격 저장소를 로컬에 다운로드 (fetch + checkout) [https://git-scm.com/book/ko/v2/Git%EC%9D%98-%EA%B8%B0%EC%B4%88-Git-%EC%A0%80%EC%9E%A5%EC%86%8C-%EB%A7%8C%EB%93%A4%EA%B8%B0#_git_cloning]
 - Status 로컬 저장소(git)의 Working Directory 상태 확인
 - Meta Data(메타 정보) == commit, tag, branch, history
 - Origin 로컬 repository의 URL 대명사
+
+- 원격과 로컬 저장소 동기화(branch 정보 동기화때 실습함)
+    - git push --mirror
 
 Git 주요 command [https://git-scm.com/book/ko/v2/%EB%B6%80%EB%A1%9D-C%3A-Git-%EB%AA%85%EB%A0%B9%EC%96%B4-%EC%84%A4%EC%B9%98%EC%99%80-%EC%84%A4%EC%A0%95]
 - $git add << 파일을 Staging
