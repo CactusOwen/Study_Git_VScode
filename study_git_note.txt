@@ -68,7 +68,7 @@ https://git-scm.com/book/ko/v2/%EB%B6%84%EC%82%B0-%ED%99%98%EA%B2%BD%EC%97%90%EC
     - commit과 Working Directory 간의 변경사항 확인: $git diff --cached or {empty}
 - $git clean -xdf<< Working Directory에 있는 Untracked file 모두 삭제
 https://git-scm.com/book/ko/v2/Git-%EB%8F%84%EA%B5%AC-%EA%B2%80%EC%83%89
-- $git grep << Search on working dir & git history
+- $git grep << Search on working dir & git history << git log, 등에서 스트링 검색을 포함할 때 사용된다.
 https://git-scm.com/book/ko/v2/Git-%EB%8F%84%EA%B5%AC-Git%EC%9C%BC%EB%A1%9C-%EB%B2%84%EA%B7%B8-%EC%B0%BE%EA%B8%B0
 - $git bisect << 이진 탐색을 통해 문제가 시작된 commit을 빠르게 찾아내고 되돌아가기 위한 명령어
 
