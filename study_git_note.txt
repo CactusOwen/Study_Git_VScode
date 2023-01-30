@@ -1,0 +1,211 @@
+git의 특징
+- Branching and Merging
+- Small and Fast
+    - git is working at local area
+- Distriduted
+- Data Assurance
+    - git check all of check sum 
+- Staging area
+    - working direstory >> $git add
+    - Staging area >> $git commit
+    - repo(sitory)
+- Free open source
+
+Untracked || Unmodified || Modified || staged
+
+Working Directory || Staging Area || Repository
+
+왜 git의 Staging Area가 유용한가
+- https://blog.npcode.com/2012/10/23/git%EC%9D%98-staging-area%EB%8A%94-%EC%96%B4%EB%96%A4-%EC%A0%90%EC%9D%B4-%EC%9C%A0%EC%9A%A9%ED%95%9C%EA%B0%80/
+
+Git 용어 정리하기
+- Reset 소스 파일을 특정 지점으로 되돌리기
+- Merge / Rebase / 
+- push / pull
+- diff 저장공간 간의 변경사항 확인하기
+- Alias 단축 명령어 설정하기 [https://git-scm.com/book/ko/v2/Git%EC%9D%98-%EA%B8%B0%EC%B4%88-Git-Alias#_git_aliases]
+- patch
+- Checkout
+- Remote 원격 저장소에 추가/삭제/조회 작업
+- Clone 원격 저장소를 로컬에 다운로드 (fetch + checkout)
+- Status 로컬 저장소(git)의 Working Directory 상태 확인
+- Meta Data(메타 정보) == commit, tag, branch, history
+
+Git 주요 command
+- $git add << 파일을 Staging
+    - 특정 파일만 Staging: $git add <filename>
+    - 작업한 모든 파일을 Staging: $git add (option)
+        - 숨김 파일 제외: *
+        - 삭제한 파일 제외: .
+        - 신규 파일 제외: -u
+        - 수정한 파일 제외: -a
+- $git fetch <remote name> << download git repository(원격 저장소의 메타 정보를 로컬 저장소에 다운로드)
+- $git commit
+    - $git commit 
+    - $git commit --amend << modify commit message. or modify commit
+        - 이미 push했을 경우 수정시 SHA-1 값이 달라지기 때문에 주의해야한다.
+- $git merge <commit, branch, tag>
+- $git branch << 로컬/원격 Branch 추가/삭제/조회 
+    - 추가: $git branch <name>
+    - 삭제: $git branch -d <name>
+    - 조회: $git branch [로컬: {empty} / 원격: -r / 둘다: -a]
+- $git clone {URL} -b{Branch}
+- $git checkout <branch> << generate the sources. 작업 브랜치를 변경한다.
+- $git remote [add <name> <URL> / remove <name> / -v]
+- $git push <remote name> <local refs>:<remote refs> << 로컬 저장소에 생성한 commit 또는 tag, branch 정보를 원격 저장소에 반영한다.
+- $git pull <remote> <refs> == $git fetch + $git merge
+- $git tag
+- $git show [<commit> / <tag>, <branch>] << commit에 포함된 변경사항 조회
+https://git-scm.com/book/ko/v2/%EB%B6%84%EC%82%B0-%ED%99%98%EA%B2%BD%EC%97%90%EC%84%9C%EC%9D%98-Git-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EA%B4%80%EB%A6%AC%ED%95%98%EA%B8%B0
+- $git log(shortlog)(reflog)
+    - $git log -L :function name:file name << file안의 function의 history를 모두 보여준다.
+- $git diff << 저장공간 간의 변경사항 확인하기
+    - commit 간의 변경사항 확인: $git diff <commit> <commit>
+    - commit과 Working Directory 간의 변경사항 확인: $git diff --cached or {empty}
+- $git clean -xdf<< Working Directory에 있는 Untracked file 모두 삭제
+https://git-scm.com/book/ko/v2/Git-%EB%8F%84%EA%B5%AC-%EA%B2%80%EC%83%89
+- $git grep << Search on working dir & git history
+https://git-scm.com/book/ko/v2/Git-%EB%8F%84%EA%B5%AC-Git%EC%9C%BC%EB%A1%9C-%EB%B2%84%EA%B7%B8-%EC%B0%BE%EA%B8%B0
+- $git bisect << 이진 탐색을 통해 문제가 시작된 commit을 빠르게 찾아내고 되돌아가기 위한 명령어
+
+- $git format-patch(?)
+
+Option Keyword
+https://git-scm.com/book/en/v2/Git-Tools-Interactive-Staging
+- 대화형 "-i"
+- 가상 실행 "-n"
+- 강제 실행 "-f"($git clean과 함께 사용)
+
+https://git-scm.com/book/ko/v2/Git-%EB%B8%8C%EB%9E%9C%EC%B9%98-%EB%B8%8C%EB%9E%9C%EC%B9%98%EC%99%80-Merge-%EC%9D%98-%EA%B8%B0%EC%B4%88
+git에서 변경 사항 검사와 충돌 확인 방식
+- merge시 대상이 되는 두 commit의 common ancestor를 찾아 3개의 commit을 비교함으로써 검사를 진행한다.
+
+commit을 통합하는 방법
+- merge
+- rebase, 
+- cherry-pick << commit 하나만 rebase하는 것(?)
+    - cherry-pick을 하면 지정한 하나의 커밋 정보만 rebase되는 것인가?
+        - common commit 이후 그리고 지정한 commit 사이의 commit의 정보나 지정한 commit 이후의 commit의 정보는 어떻게 되는가?
+
+
+Git은 각 커밋을 노드로 하는 단반향 연결 구조?
+Head와 Branch라고 하는 최신 노드를 가리키는 포인터 목록을 유지하고 있으며 
+연결구조는 최신 노드가 이전 노드를 가리키는 구조?
+그렇기 때문에 이전 노드로 돌아가면(reset) 최신화 했던 커밋의 정보를 잃는 것인가?
+    <<< reset은 Head가 이전 커밋을 가리키도록 하는 것일 뿐 Data는 사라지지 않는다.
+그렇다면 merge한 branch는 기존에 유지하고 있던 연결까지 병합하는 것인가?
+이 경우 merge하기 전 그리고 branch를 만든 후의 시점으로 reset하면 병합한 정보는 어떻게 되는 거지?
+https://git-scm.com/book/ko/v2/Git-%EB%8F%84%EA%B5%AC-Reset-%EB%AA%85%ED%99%95%ED%9E%88-%EC%95%8C%EA%B3%A0-%EA%B0%80%EA%B8%B0
+- $git reset [option] <commit> << default 값은 --mixed이다.
+    - --soft : 단순히 Head가 가리키는 커밋을 바꿔준다.
+    - --mixed : 바꾼 head가 가리키는 commit이 새로운 commit으로 바뀌는 과정 중 add를 하기 전으로 되돌린 것이다.(working dir에 수정된 파일은이 존재한다.)
+    - --hard : 바뀐 head가 가리키는 commit이 commit될 때의 상태로 되돌린다.
+https://git-scm.com/book/ko/v2/Git-%EB%8F%84%EA%B5%AC-Reset-%EB%AA%85%ED%99%95%ED%9E%88-%EC%95%8C%EA%B3%A0-%EA%B0%80%EA%B8%B0
+-reset과 checkout의 차이점
+    - 첫 번째로 reset --hard 명령과는 달리 checkout 명령은 워킹 디렉토리를 안전하게 다룬다. 
+    저장하지 않은 것이 있는지 확인해서 날려버리지 않는다는 것을 보장한다. 
+    사실 보기보다 좀 더 똑똑하게 동작한다. 워킹 디렉토리에서 Merge 작업을 한번 시도해보고 변경하지 않은 파일만 업데이트한다. 
+    반면 reset --hard 명령은 확인하지 않고 단순히 모든 것을 바꿔버린다.
+    - 두 번째 중요한 차이점은 어떻게 checkout 명령이 HEAD를 업데이트 하는가이다. 
+    reset 명령은 HEAD가 가리키는 브랜치를 움직이지만(브랜치 Refs를 업데이트하지만), 
+    checkout 명령은 HEAD 자체를 다른 브랜치로 옮긴다.
+
+각 commit의 checksum은 id이다.
+
+Q: 리모트와 로컬 ... 서버와 데이터들의 연동 ... 커밋만 저장할 뿐이라면 수정된 데이터들은 어떤 형태 방식으로 저장이 되어있는지 ...
+
+/*아직 명령어들의 자세한 작동 방식을 이해 못함
+한 번에 많은 명령어들을 익힐려니 헷갈린다.*/
+
+https://git-scm.com/book/ko/v2/Git-%EB%B8%8C%EB%9E%9C%EC%B9%98-Rebase-%ED%95%98%EA%B8%B0
+rebase는 공유된 branch의 commit을 복사하여 새로 만륻어서 master branch에 붙이는 거지만
+merge는 공유된 branch를 그대로 유지하면서 새로운 커밋에 병합할 두 개의 branch 연결 포인터를 유지하기 때문에
+수정된 데이터의 순서를 파악할 수 있다.(맞겠지?)
+
+https://git-scm.com/book/ko/v2/Git-%EB%8F%84%EA%B5%AC-%ED%9E%88%EC%8A%A4%ED%86%A0%EB%A6%AC-%EB%8B%A8%EC%9E%A5%ED%95%98%EA%B8%B0
+rebase를 통해 commit의 순서 바꾸기, 여러 개의(최신의 commit외에도 과거의 commit도) commit 수정하기, commit 합치기, 분리하기 가 가능하다.
+
+Commit Tip >>> Git 프로젝트의 Documentation/SubmittingPatches (?)
+
+https://git-scm.com/book/en/v2/Distributed-Git-Distributed-Workflows
+분산 환경 Git에서의 프로젝트 기여요소
+- 활발하게 기여하는 개발자의 수
+- 선태한 워크플로
+- 접근 권한
+
+https://git-scm.com/book/en/v2/Git-Tools-Revision-Selection
+리비전 하나 가리키기
+- 커밋을 가리키거나 표현하는 방법 몇 가지를 설명한다.
+
+https://git-scm.com/book/en/v2/Git-Tools-Stashing-and-Cleaning
+Stash << 작업 중인 branch에서 commit을 하지 않은채
+    잠시 다른 branch로 변경하여 작업이 필요한 경우 
+    마무리 하지 못한 작업을 stack에 잠시 저장할 수 있도록 해주는 명령어이다.
+    - Stash가 저장하는 파일
+        - Modified이면서 Tracked
+        - Staged file
+
+https://git-scm.com/book/en/v2/Git-Tools-Advanced-Merging
+- Merge
+    - $git merge --abort << cancel merge
+        - OR $git reset --hard HEAD << working dir를 완전히 그 시점으로 되돌리기 때문에 저장하지 않은 파일은 사라짐에 주의
+    - $git merge -Xignore-space-change << 의미없는 공백도 수정사항으로 여겨져 충돌의 원인이 될 수 있기 때문에 공백을 무시하며 실행한다.
+        - OR $git merge -Xignore-all-space
+
+https://git-scm.com/book/ko/v2/Git-%EB%8F%84%EA%B5%AC-Rerere
+- Rerere
+    - merge 또는 rebase 실행시 충돌이 발생하면 $git rerere diff를 통해
+    충돌 내용과 해결방안을 받을 수도 있다. 이러한 충돌 사례는 자동으로 저장되어 
+    이후 같은 충돌이 발생할 경우 $git rerere를 통해 다시 해결할 수 있다.
+
+https://git-scm.com/book/ko/v2/Git-%EB%8F%84%EA%B5%AC-Bundle
+- Bundle
+    - %git bundle로 데이터를 전송할 네트워크의 상황이 여의치 않거나 쉽게 공유할 저장소 없을 경우 히스토리를 쉽게 공유할 수 있다.
+
+
+Q: 왜 Replace를 사용하는가?
+
+현재 문서로만 git을 공부하려고 하니 정확한 습득이 이루어지지 않는다.
+지금은 기초를 정확히 이해하고 바로 사용할 수 있는 정도로 공부하고 심화 부분은 나중에 정리한 내용을 보면 다시 학습할 수 있도록 준비하자.
+
+
+/*---------------------------------------------------------
+
+https://velog.io/@ejjjang0414/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D-SHA-1-%EC%9D%B4%EB%9E%80-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80
+https://git-scm.com/docs/hash-function-transition/
+- SHA-1 hash algorithim
+    - Secure Hash Algorithm은 19993년 NAS에서 발표되었습니다.
+    - 최초의 SHA는 구분을 위해 SHA-0라고 명칭하며 이후 발표 SHA-1가 발표되었습니다.
+    - 이후 발표된  SHA-224, SHA-256, SHA-384, SHA-512는 통틀어서 SHA-2라고 명칭합니다.
+    - SHA-1는 최대 2^64 bit의 데이터를 160비트의 데이터로 계산합니다.
+    - SHA-1은 SHA-0에 비트 회전 연산을 하나 추가한 것으로 암호학적 보안을 감소시키는 문제를 보완한 것입니다.
+    - SHA-1은 IPSec, SMIME, TLS, SSL, PGP, SSH, 등 인터넷 보안 프로토콜과 공개키 인증서에도 사용되는 알고리즘입니다.
+    - 하지만 SHA-1가 미국 국가 표준 Hash Algorithm으로 채택된지 10년만에 '160비트의 message digest를 생성하는데 무차별 대입 공격으로 동일한 해시를 만들 수 있는 취약'
+    하다는 보안 문제점이 제기되어 SHA-2가 새로운 권장 Hash Algorithm이 되었습니다.
+
+https://git-scm.com/docs/hash-function-transition/
+- SHA of Git
+    - The use of a hash function to address its content delivers a few advantages:
+        - Integrity(무결성) checking is easy.
+        - Lookup of objects is fast.
+    - Git은 보안과 commit의 id 계산을 위해 SHA를 사용했습니다.
+    하지만 2017년 2월 23일 SHAttered attack으로 SHA-1의 충돌이 증명되어 더 나은 Hash Algorithm이 필요했습니다.
+    그로 인해 Git은 Hash Algorithm을 SHA-1에서 Hardened SHA-1로 변경하였고, 이는 brute-force birthday attack에 강합니다.
+    Git은 Hardened SHA-1이 앞으로 10년 동안 유지되길 바랍니다.
+
+https://en.wikipedia.org/wiki/Birthday_attack
+- Brithday attack (in brute-force)
+    - 암호 해독 공격 중 하나로 생일 문제의 확률적 기반에 따라 입력 값이 다양해질 수록 충돌의 가능성이 커지는 원리를 이용한 공격이다.
+    - 주로 충돌 쌍을 발견하는데 사용되는 방법이다.
+
+
+https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=nttkak&logNo=20130240183
+https://www.techopedia.com/definition/4024/message-digest
+- Message digest를
+    - MD(Messge Digest) 메세지 암축 함수는 임의의 길이의 데이터를 128bit로 변환하여 출력합니다.
+    - 단방향 알고리즘으로 해시값에서 평문으로 반환이 어렵습니다.
+
+
+너무 공부 내용이 삼천포로 빠진다. 나중에 더 필요하다고 생각하면 다시보기
+(Git Doc의 Goals부터 보면됨 https://git-scm.com/docs/hash-function-transition/)
+---------------------------------------------------------*/
