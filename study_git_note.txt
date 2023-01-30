@@ -209,3 +209,6 @@ https://www.techopedia.com/definition/4024/message-digest
 너무 공부 내용이 삼천포로 빠진다. 나중에 더 필요하다고 생각하면 다시보기
 (Git Doc의 Goals부터 보면됨 https://git-scm.com/docs/hash-function-transition/)
 ---------------------------------------------------------*/
+
+
+test chage
