@@ -173,7 +173,7 @@ Q: 왜 Replace를 사용하는가?
 지금은 기초를 정확히 이해하고 바로 사용할 수 있는 정도로 공부하고 심화 부분은 나중에 정리한 내용을 보면 다시 학습할 수 있도록 준비하자.
 
 https://www.whatwant.com/entry/bare-%EC%99%80-mirror%EC%9D%98-%EC%B0%A8%EC%9D%B4
-option [--normal / --no-checkout / --bare / --mirror]
+option [--normal{default} / --no-checkout / --bare / --mirror]
 - 
 
 /*---------------------------------------------------------
@@ -218,3 +218,6 @@ https://www.techopedia.com/definition/4024/message-digest
 ---------------------------------------------------------*/
 
 Good morning
+
+*Yocto* 
+
