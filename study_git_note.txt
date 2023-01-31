@@ -223,7 +223,8 @@ Good morning
 
 
 *C++ STL*
-- map << 사용법은 같음 하지만 내부의 구현 방식이 서로 달라 메모리 자원 크기 또는 데이터의 양에 따라 사용 구조를 다르게 해야 한다.
+- map << 사용법은 같음 하지만 내부의 구현 방식이 서로 달라 
+         메모리 자원 크기 또는 데이터의 양에 따라 사용 구조를 다르게 해야 한다.
     - map
         - red black Tree
     - unoredered map
@@ -231,3 +232,17 @@ Good morning
 
 - Struct & Class
     - std::pair의 경우 '->'를 사용하지 못 하는데 이는 std::pair가 Struct로 구현되어 있는 것과 관련이 있는 것일까?
+        https://codemasterkimc.tistory.com/14
+        - A:아님. 연산자 '.'는 직접 접근이고, '->'는 포인터를 통한 접근이 정확한 표현이다.
+        실습때 구조체에서 멤버 변수를 포인터로 접근하여 호출할 경우 '->' 연산자로 가능하였다.
+
+- Template
+    https://modoocode.com/219
+    - template <typename T> 와 template <class T>는 완전히 같은 의미를 갖지만 되도록 typename을 권장한다.
+        - typename이 이후에 생긴 개념이지만 호환을 위해 class의 개념을 남겨둔 것
+
+- C++
+    - C++에서 처리하는 기본 단위는 1byte
+
+- 구조체 메모리 구조
+- 멀티스레드 프로그래밍 Mutex sync 

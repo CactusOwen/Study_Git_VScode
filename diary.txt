@@ -17,3 +17,5 @@ What i did everyday?
 
 23/01/31
 - map과 unoredered_map의 차이점
+- Struct & Class 실습 및 연산자 '.' 와 '->' 차이점 실습
+- 간단하게 c++ 복습

@@ -1,0 +1,8 @@
+
+
+- 구조체 메모리 구조
+- 멀티스레드 프로그래밍 Mutex sync 
+- 자료구조(map {여러 형태의}, vector, list, 등?)
+- c++ 상속
+- 리눅스 환경 사용법
+- VScode_remote SSH

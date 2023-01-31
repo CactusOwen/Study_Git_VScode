@@ -20,14 +20,16 @@ int main() {
 struct t_stru{
     int value;
     std::string name;
+    std::pair<int, int> p;
 
     void print_stru(){
-        std::cout << name << "'s value: " << value << std::endl;
+        std::pair<int, int> *pp = &p;
+        std::cout << name << "'s value: " << value << "/p :" << pp->first << "-&-" << pp->second << std::endl;
     }
 };
 
 class t_class{
-public:
+private:
     int value;
     std::string name;
 public:
@@ -51,12 +53,16 @@ void test_struct(){
     ts.name = "Version one";
     ts.value = 123;
     ts.print_stru();
+
+    ts.p.first = 158;
+    ts.p.second = 610;
+
+    ts.print_stru();
 }
 
 void test_class(){
     t_class tc(999, "ver class");
 
-    std::cout << tc.value << std::endl;
     tc.print_data();
 }
 
