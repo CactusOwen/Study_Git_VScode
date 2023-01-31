@@ -240,9 +240,31 @@ Good morning
     https://modoocode.com/219
     - template <typename T> 와 template <class T>는 완전히 같은 의미를 갖지만 되도록 typename을 권장한다.
         - typename이 이후에 생긴 개념이지만 호환을 위해 class의 개념을 남겨둔 것
+        - template를 사용한 class or struct 사용시 typename의 정의는 불필요하다.
+        이미 정의 되어있는 것처럼 사용하면 컴파일러가 스스로 타입을 인식한다.
+    - template의 인자는 typename외의 int나 string 같은 다른 타입도 가능하다.
+    - 가변 인자 길이 템플릿(임의의 개수의 인자를 받을 수 있음)
+        - ex:   template <typename T, typename... Types>
+                void print(T arg){
+                    std::cout << arg << std::endl;
+                }
+                void print(T arg, Types args){
+                    std:;cout << arg << ", ";
+                    print(args...);
+                }
 
+- Functor
+    - 함수 객체 : 함수는 아니지만 함수처럼 사용되는 객체
+    - ex:   struct Comp1 {
+                bool operator()(int a, int b) { return a > b; }
+            };
+
+            Comp1 comp1;
+            if(comp1(3, 7)){
+
+            }
 - C++
+    https://modoocode.com/219
     - C++에서 처리하는 기본 단위는 1byte
+        - 그렇기에 vector<bool>을 구현하기 위해선 byte단위를 bit 단위로 나누어 계산하는 비트연산이 필요하다.
 
-- 구조체 메모리 구조
-- 멀티스레드 프로그래밍 Mutex sync 

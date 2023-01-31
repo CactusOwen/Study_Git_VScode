@@ -1,3 +1,0 @@
-hello new branch
-
-Just commit
