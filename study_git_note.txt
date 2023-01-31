@@ -223,8 +223,11 @@ Good morning
 
 
 *C++ STL*
-- map
+- map << 사용법은 같음 하지만 내부의 구현 방식이 서로 달라 메모리 자원 크기 또는 데이터의 양에 따라 사용 구조를 다르게 해야 한다.
     - map
         - red black Tree
     - unoredered map
         - Hash Table
+
+- Struct & Class
+    - std::pair의 경우 '->'를 사용하지 못 하는데 이는 std::pair가 Struct로 구현되어 있는 것과 관련이 있는 것일까?
