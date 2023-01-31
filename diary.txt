@@ -19,3 +19,7 @@ What i did everyday?
 - map과 unoredered_map의 차이점
 - Struct & Class 실습 및 연산자 '.' 와 '->' 차이점 실습
 - 간단하게 c++ 복습
+    - 그 이상을 하는 중
+- 2월 2일 발표용 피피티 콘티 제작
+- 모두의 코드 씹어먹는 C++ - <9 - 3. 템플릿 메타 프로그래밍 (Template Meta programming)>
+    - TMP 를 왜 쓰는가? 부터 보기

@@ -237,7 +237,7 @@ https://dev-mystory.tistory.com/312#:~:text=c%2B%2B%EC%97%90%EC%84%9C%EB%8A%94%2
         - A:아님. 연산자 '.'는 직접 접근이고, '->'는 포인터를 통한 접근이 정확한 표현이다.
         실습때 구조체에서 멤버 변수를 포인터로 접근하여 호출할 경우 '->' 연산자로 가능하였다.
 
-- Template
+- Template << 일반화 프로그래밍(Generic programming)
     https://modoocode.com/219
     - template <typename T> 와 template <class T>는 완전히 같은 의미를 갖지만 되도록 typename을 권장한다.
         - typename이 이후에 생긴 개념이지만 호환을 위해 class의 개념을 남겨둔 것
@@ -261,6 +261,15 @@ https://dev-mystory.tistory.com/312#:~:text=c%2B%2B%EC%97%90%EC%84%9C%EB%8A%94%2
                         return (... + nums);
                     }
 
+https://modoocode.com/221
+- Template Meta Programming
+    - Template와 같이 type을 가지고 컴파일 타임에 생성되는 코드로 프로그래밍 하는 것
+        - type의 확정이 컴파일 타임에 끝나야 하기 때문에 모든 연산이 컴파일 타임에 완료가 된다.
+    - template의 인자로 변수는 불가능한가?
+        - for(auto n: vec){
+            std::cout << n << "'s Factorial: " << Fac<n>::result << std::endl;
+          }
+
 - Functor
     - 함수 객체 : 함수는 아니지만 함수처럼 사용되는 객체
     - ex:   struct Comp1 {
@@ -271,6 +280,7 @@ https://dev-mystory.tistory.com/312#:~:text=c%2B%2B%EC%97%90%EC%84%9C%EB%8A%94%2
             if(comp1(3, 7)){
 
             }
+
 
 - sizeof...
 
