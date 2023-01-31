@@ -1,0 +1,19 @@
+What i did everyday?
+
+23/01/27
+- STL map 동작 방식, 내부 구조 공부
+- STL map 헤더파일 확인하기
+- Git Book chap5 and chap7.1~7.10
+- 공부하는 내용들 조금씩 txt파일로 정리하기
+- Qt Doc을 통해 Qt의 기본 조사하기
+
+23/01/30
+- SHA-1 이란 무엇인가
+- Git에서 사용하는 SHA
+- Git Book chap5 and chap7.11~7.15
+- Git 용어 정리하면서 복습하기
+- Git 실습
+- Yocto 다시보기
+
+23/01/31
+- map과 unoredered_map의 차이점
