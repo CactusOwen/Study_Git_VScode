@@ -223,6 +223,7 @@ Good morning
 
 
 *C++ STL*
+https://dev-mystory.tistory.com/312#:~:text=c%2B%2B%EC%97%90%EC%84%9C%EB%8A%94%20%EC%97%AC%EB%9F%AC%EC%A2%85%EB%A5%98,balanced%20tree%EB%A1%9C%20%EA%B5%AC%ED%98%84%EB%90%9C%EB%8B%A4.
 - map << 사용법은 같음 하지만 내부의 구현 방식이 서로 달라 
          메모리 자원 크기 또는 데이터의 양에 따라 사용 구조를 다르게 해야 한다.
     - map
@@ -252,6 +253,13 @@ Good morning
                     std:;cout << arg << ", ";
                     print(args...);
                 }
+        - c++11 까지는 가변 길이 템플릿을 사용하기 위해선 재귀 함수의 형태로 사용해야 했기 때문에
+        베이스 함수와 재귀 함수가 필요하다.
+            - c++17 부터는 Fold형식이 도입이 되면서 재귀 함수를 따로 작성해줄 필요가 사라졌다.
+            - ex:   template <typename... Nums>
+                    int sum_all(Nums... nums){
+                        return (... + nums);
+                    }
 
 - Functor
     - 함수 객체 : 함수는 아니지만 함수처럼 사용되는 객체
@@ -263,6 +271,9 @@ Good morning
             if(comp1(3, 7)){
 
             }
+
+- sizeof...
+
 - C++
     https://modoocode.com/219
     - C++에서 처리하는 기본 단위는 1byte
