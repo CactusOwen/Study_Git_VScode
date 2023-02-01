@@ -1,0 +1,27 @@
+https://blog.naver.com/PostView.naver?blogId=cieljin2&logNo=222706501051&parentCategoryNo=&categoryNo=15&viewDate=&isShowPopularPosts=true&from=search
+What is ccIC?
+- ccIC [Connected Car Integrated Cockpit]
+- System Line-Up
+    - Audio
+    - Display Audio: 네비 기능을 제외한 모든 기능을 제공하고, 터치를 제공하고
+    - Standard Class Navigation: 네비게이션, 실시간 교통정보, 커넥티드카 서비스 기능 제공
+    - Premium Class Navigation: RSE(Rear Seat Entertainment) 뒷자석 전용 인포테인먼트 제공
+
+- ccNC [Connected Car Navigation Cockpit]
+- ccOC [Connected Car Operationg System]
+
+
+- AP [Application Processor]
+
+https://news.einfomax.co.kr/news/articleView.html?idxno=4198861
+- Digital Cockpit
+    - 디지털화된 자동차의 내부 공간
+    - 이동통신 서비스와 사물 인터넷을 중심으로 개발
+    - 자동차 안에서 엔터네이먼트를 즐길 수 있을 뿐 아니라 원격 회의까지 
+    진행할 수 있을 정도의 생산성이 높은 공간을 배치하는 기술이다.
+    - 차량 내 경험을 중시하는 관련 기술들이 주목을 받고 있다.
+    - Cockpit: 항공기나 보트의 조정석
+        - 차량 운행, 실내 운행, 등 필요한 모든 기능을 제어할 수 있는 장소
+            -이 처럼 자동차의 운전석에서 주행 정보, 차량 상태, 엔터네이먼트 
+            정보를 한눈에 파악할 수 있도록 '차량용 Cockpit'의 중요성이 강조되고 있다.
+    - '차량용 Cockpit' = 계기판 [Cluster] + AVN [Audio Video Navigation] + CID [Center Information Display]
